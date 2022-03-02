@@ -1,0 +1,21 @@
+diff --git a/node_modules/debug/src/node.js b/node_modules/debug/src/node.js
+index 79bc085..9caa438 100644
+--- a/node_modules/debug/src/node.js
++++ b/node_modules/debug/src/node.js
+@@ -200,15 +200,7 @@ function log(...args) {
+  * @param {String} namespaces
+  * @api private
+  */
+-function save(namespaces) {
+-	if (namespaces) {
+-		process.env.DEBUG = namespaces;
+-	} else {
+-		// If you set a process.env field to null or undefined, it gets cast to the
+-		// string 'null' or 'undefined'. Just delete instead.
+-		delete process.env.DEBUG;
+-	}
+-}
++function save(namespaces) {}
+ 
+ /**
+  * Load `namespaces`.
